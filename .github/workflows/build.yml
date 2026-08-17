@@ -18,10 +18,10 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Download LSPosed API
+      - name: Download Xposed API
         run: |
           mkdir -p app/libs
-          wget -O app/libs/lsposed-api.jar https://github.com/LSPosed/LSPosed/releases/download/v1.9.2/lsposed-api-1.9.2.jar
+          wget -O app/libs/xposed-api.jar https://github.com/rovo89/XposedBridge/raw/master/XposedBridge-api-82.jar
 
       - name: Build with Gradle
         run: |
