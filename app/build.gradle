@@ -26,7 +26,6 @@ android {
 }
 
 dependencies {
-    // 使用 libxposed API（官方推荐）
     compileOnly 'io.github.libxposed:api:102.0.0'
 }
 
