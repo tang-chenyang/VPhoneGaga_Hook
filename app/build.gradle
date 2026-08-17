@@ -1,0 +1,32 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.your.hook'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.your.hook"
+        minSdk 21
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+        }
+    }
+
+    // 禁止生成 APK 时检查是否有 Activity，因为我们是模块
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    // 使用本地的 LSPosed API（下载到 libs 目录）
+    compileOnly fileTree(dir: 'libs', include: ['*.jar'])
+}
